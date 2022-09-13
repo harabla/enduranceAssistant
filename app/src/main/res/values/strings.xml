@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Endurance Assistant</string>
+
+    //main Activity Login activity
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+
+    //main navigation
+    <string name="mainActivity">Main</string>
+    <string name="calendarActivity">Calendar</string>
+    <string name="teamActivity">Team</string>
+
+    //event data
+    <string name="eventNameField">Event Name</string>
+    <string name="simulatorNameField">Simulator</string>
+    <string name="trackNameField">Track</string>
+    <string name="eventDateNameField">Date of event (Real life)</string>
+    <string name="eventTimeNameField">Time of event (Real life)</string>
+    <string name="eventSimulatorTimeNameField">Time of event (Simulator time)</string>
+
+
 </resources>
