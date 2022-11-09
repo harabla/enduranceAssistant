@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RaceActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceSummary">
+
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Race Summary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="3dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:minHeight="100dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Start time (RT)"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="12:00"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Start time (Sim)"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="21:00"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Green flag offset"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="00:40"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/border"
+            android:padding="5dp"
+            android:minHeight="100dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Time left"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="12:00"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="End of stint"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="21:00"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Next driver"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="00:40"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:padding="3dp"/>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Race events"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/raceRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raceSummary"/>
+
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/bottomBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/addStintButton"
+            android:background="@drawable/circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add stint"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp" />
+
+        <Button
+            android:id="@+id/editRaceButton"
+            android:background="@drawable/circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Settings"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp" />
+
+
+
+        <Button
+            android:id="@+id/exitButton"
+            android:background="@drawable/circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exit"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp" />
+    </TableRow>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
